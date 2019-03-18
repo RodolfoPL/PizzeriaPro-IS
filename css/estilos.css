@@ -1,0 +1,68 @@
+a.foot, p.foot{
+	color: #DAD7D7;
+	padding-bottom: 0px;
+}
+footer{
+	position: button;
+}
+p.menu{
+	color: black;
+	margin-bottom: 2px;
+}
+
+#infoPizza{
+	width: 100%;
+}
+
+li.foot{
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+div.thumbnail{
+	text-align: center;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.sidebar-right .main{
+  float:left;
+}
+.idebar-right .sidebar{
+  float:right;
+}
+
+div.row{
+	margin-top: 2px;
+}
+
+col.col-md-4{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+h2{
+	color: #2FB510
+}
+
+.map-container-2{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.map-container-2 iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+@media screen and (max-width: 768){
+	.post .thumb {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+}
