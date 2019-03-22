@@ -1,3 +1,6 @@
+<?php
+	include("header.html");
+?>
 <section class="main container">
 	<!-- Pizza1 -->
 	<div class="row justify-content-center">
@@ -29,10 +32,18 @@
 	</div>
 	<div class="row justify-content-center">
 		<div class="col-md-6">
-			<button class="btn btn-success"> Comprar</button>
+			<form action="InfoPago.php">
+				<button type="submit" class="btn btn-success"> Comprar</button>
+			</form>
 		</div>
 		<div class="col-md-6">
-			<button class="btn btn-danger"> Cancelar pedido</button>
+			<form action="menupizzas.php">
+				<button type="submit" class="btn btn-danger"> Cancelar pedido</button>
+			</form>
 		</div>
 	</div>
 </section>
+
+<?php
+	include("footer.html");
+?>

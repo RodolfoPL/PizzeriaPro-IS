@@ -1,5 +1,8 @@
+<?php
+	include("header.html");
+?>
 <section class="main container">
-	<form>
+	<form action="pago_targeta.php">
 		<fieldset>
 		    <legend class="scheduler-border">Selecciona metodo de pago</legend>
 		    <div class="col-sm-10">
@@ -31,6 +34,13 @@
 					</div>
 		        </div>
 		</fieldset>
+		<button type="submit" class="btn btn-success">Comprar</button>
 	</form>
-	<button type="button" class="btn btn-danger">Cancelar compra</button>
+	<form action="menupizzas.php">
+		<button type="submit" class="btn btn-danger">Cancelar compra</button>
+	</form>
 </section>
+
+<?php
+	include("footer.html");
+?>

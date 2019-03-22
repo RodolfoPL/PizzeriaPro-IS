@@ -1,8 +1,6 @@
-
-
 <?php
 	include("header.html");
-	include("descripcionpizza.php");
+	include("descripcionpaquete.php");
 ?>
 
 <section class="main container">
@@ -10,26 +8,26 @@
 		<div class="col-md-8">
 			<!-- Fila de pizza -->
 			<div class="row justify-content-center">
-			<!-- Pizza -->
+			<!-- Paquete -->
 			  <div class="col-md-5">
 			    <div class="thumbnail" >
 			    	<a href="#" data-toggle="modal" data-target="#descripcion">
-			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Pizza">
+			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Paquete">
 			        <div class="caption">
-						<p class="menu">Nombre Pizza</p>
-						<p class="menu">Costo Pizza</p>
+						<p class="menu">Nombre Paquete</p>
+						<p class="menu">Costo Paquete</p>
 			        </div>
 			      </a>
 			    </div>
 			  </div>
-			<!-- Pizza -->
+			<!-- Paquete -->
 			  <div class="col-md-5">
 			    <div class="thumbnail" >
 			    	<a href="#" data-toggle="modal" data-target="#descripcion">
-			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Pizza">
+			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Paquete">
 			        <div class="caption">
-						<p class="menu">Nombre Pizza</p>
-						<p class="menu">Costo Pizza</p>
+						<p class="menu">Nombre Paquete</p>
+						<p class="menu">Costo Paquete</p>
 			        </div>
 			      </a>
 			    </div>
@@ -37,26 +35,26 @@
 			</div>
 			<!-- Fila de pizza -->
 			<div class="row justify-content-center">
-			<!-- Pizza -->
+			<!-- Paquete -->
 			  <div class="col-md-5">
 			    <div class="thumbnail" >
 			    	<a href="#" data-toggle="modal" data-target="#descripcion">
-			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Pizza">
+			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Paquete">
 			        <div class="caption">
-						<p class="menu">Nombre Pizza</p>
-						<p class="menu">Costo Pizza</p>
+						<p class="menu">Nombre Paquete</p>
+						<p class="menu">Costo Paquete</p>
 			        </div>
 			      </a>
 			    </div>
 			  </div>
-			<!-- Pizza -->
+			<!-- Paquete -->
 			  <div class="col-md-5">
 			    <div class="thumbnail" >
 			    	<a href="#" data-toggle="modal" data-target="#descripcion">
-			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Pizza">
+			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Paquete">
 			        <div class="caption">
-						<p class="menu">Nombre Pizza</p>
-						<p class="menu">Costo Pizza</p>
+						<p class="menu">Nombre Paquete</p>
+						<p class="menu">Costo Paquete</p>
 			        </div>
 			      </a>
 			    </div>

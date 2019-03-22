@@ -32,13 +32,19 @@
     </div>
     <div class="row justify-content-center">
     	<div class="col">
-    		<button type="submit" class="btn btn-success">
-    			COMPRAR
-    		</button>
-    		<button type="button" class="btn btn-info">
-    			VER CARRITO
-    		</button>
+            <form action="InfoPago.php">
+        		<button type="submit" class="btn btn-success">
+        			COMPRAR
+        		</button>
+            </form>
     	</div>
+        <div class="col">
+            <form action="carrito.php">
+                <button type="submit" class="btn btn-info">
+                    VER CARRITO
+                </button>
+            </form>
+        </div>
     </div>
 </div>
 

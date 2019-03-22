@@ -1,15 +1,19 @@
+<?php
+	include("header.html");
+?>
 <section class="main container">
-	<form>
+	<form action="menupizzas.php">
 		<div class="form-row justify-content-center">
 			<div class="form-group col-md-4">
-		      <select class="form-control">
-		        <option selected>Forma de entrega</option>
-		        <option>Sucursal</option>
-		        <option>A domicilio</option>
+		      <select class="form-control" required>
+		        <option value="">Forma de entrega</option>
+		        <option value="1">Sucursal</option>
+		        <option value="2">A domicilio</option>
 		      </select>
+		      <div class="invalid-feedback">Seleccione un modo de entrega</div>
 	   		 </div>
 	   		 <div class="form-group col-md-4">
-		      <button type="submit" class="btn btn-success">Ordena Ahora</button>
+		      <a href="index.php?menu=menu_pizzas"> <button type="submit" class="btn btn-success">Ordena Ahora</button></a>
 	   		 </div>
 		</div>
 
@@ -30,3 +34,7 @@
 
 	<!--Google Maps-->
 </section>
+
+<?php
+	include("footer.html");
+?>
