@@ -2,7 +2,13 @@
 	<div class="modal-dialog" role="document" align="center">
 		<div class="modal-content" id="infoPizza" align="center">
 			<div class="modal-header">
-				<h4 class="modal-title" id="myModalLabel">Descripción de la pizza</h4>
+				<h4 class="modal-title" id="myModalLabel">
+
+					<!-- <?php echo $_POST["id"];?>
+					Descripción de la pizza 
+					no se conecta al modal-->
+
+				</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -22,19 +28,20 @@
 					        <option value="1">Chica</option>
 					        <option value="2">Mediana</option>
 					        <option value="3">Grande</option>
+					         <option value="4">Familiar</option>
 					      </select>
 					       <div class="invalid-feedback">Seleccione un tamaño de pizza</div>
 					    </div>
 						<div class="col-md-6">
 					      <label for="validationServer05">Cantidad de pizzas</label>
-					      <input type="text" class="form-control" id="cant" placeholder="cantidad" placeholder="Cantidad" required>
+					      <input type="number" min="1" max="20" class="form-control" id="cant" placeholder="cantidad" placeholder="Cantidad" required>
 					      <div class="invalid-feedback">Debe ingresar una cantidad</div>
 					  	</div>
 					  	<br>
 					  	<p class="costo">Costo: $</p>
 					  	<br>
 					  	<button class="btn btn-success" type="submit">Comprar</button>
-					  	<button class="btn btn-info" type="button">Ver Carrito</button>
+					  	<button class="btn btn-info" type="button" onclick="window.location = 'carrito.php'">Ver Carrito</button>
 			    	</form>
 		 	 	</div>
 			</div>

@@ -13,7 +13,7 @@
 		      <div class="invalid-feedback">Seleccione un modo de entrega</div>
 	   		 </div>
 	   		 <div class="form-group col-md-4">
-		      <a href="index.php?menu=menu_pizzas"> <button type="submit" class="btn btn-success">Ordena Ahora</button></a>
+		      <a href="?menu=menu_pizzas"> <button type="submit" class="btn btn-success">Ordena Ahora</button></a>
 	   		 </div>
 		</div>
 
@@ -27,10 +27,7 @@
 		</div>
 	</form>
 	<!--Google map-->
-	<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 80">
-	  <iframe src="https://maps.google.com/maps?&output=embed" frameborder="0"
-	    style="border:0" allowfullscreen></iframe>
-	</div>
+	<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=+(Pizzeria%20Pro)&ie=UTF8&t=&z=12&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/journey-planner.htm"></a></iframe></div><br />
 
 	<!--Google Maps-->
 </section>
