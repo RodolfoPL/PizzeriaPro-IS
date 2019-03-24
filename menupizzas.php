@@ -1,6 +1,6 @@
 <?php
 	include("header.html");
-	include("descripcionpizza.php");
+	include("modal.php");
 	include("conexion.php");
 	
 	//Crea el id de acuerdo al no de sesion
@@ -51,7 +51,7 @@
 						//<!-- Pizza -->
 						echo" <div class='col-md-5'>
 							<div class='thumbnail'>
-							    <a href='javascript:void(0);' data-toggle='modal' data-target='#descripcion' onclick='carga_ajax('12','modal','ajax_1.php');'>
+							    <a href='' data-toggle='modal' data-target='#descripcion' onclick='carga_ajax('12','modal','descripcionpizza.php');'>
 							        <img class='rounded img-fluid' src='".$producto['url_imagen']."' alt='Pizza'>
 							        <div class='caption'>
 										<p class='menu'>".$producto['nombre']."</p>

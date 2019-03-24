@@ -1,5 +1,4 @@
-<div class="modal fade" id="descripcion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document" align="center">
+<div class="modal-dialog" role="document" align="center">
 		<div class="modal-content" id="infoPizza" align="center">
 			<div class="modal-header">
 				<h4 class="modal-title" id="myModalLabel">
@@ -40,11 +39,10 @@
 					  	<br>
 					  	<p class="costo">Costo: $</p>
 					  	<br>
-					  	<button class="btn btn-success" type="submit">Comprar</button>
+					  	<button class="btn btn-success" type="submit">Añadir al carrito</button>
 					  	<button class="btn btn-info" type="button" onclick="window.location = 'carrito.php'">Ver Carrito</button>
 			    	</form>
 		 	 	</div>
 			</div>
 		</div>
 	</div>
-</div>

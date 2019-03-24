@@ -3,35 +3,34 @@
 	include("conexion.php");
 ?>
 <section class="main container">
-	<!-- Pizza1 -->
+	<!-- elemento 1 -->
 	<div class="row justify-content-center">
-		<!-- <?php
-			/*$con = conectar();
-				if(!$con){
-					echo "Error de base de datos";
-				}
-				$consulta = "SELECT * FROM pizza";
-				$resultado = mysqli_query($con, $consulta) or die ( "Error de consulta");
-				//mostrar todas las pizzas de la bd
-				if(mysqli_num_rows($resultado) > 0){
-					while ($producto = mysqli_fetch_array( $resultado )){
-						echo "
-							<div class='col-md-4'>
-								<img class='rounded img-fluid'src='' alt='Pizza'>
-							</div>
-							<div class='col-md-4'>
-								<p class='menu'>Nombre Pizza/Paquete</p>
-								<p class='menu'>Costo Pizza/Paquete</p>
-								<p class='menu'>Caracteristicas Pizza/Paquete</p>
-							</div>
-							<div class='col-md-4'>
-								<button class='btn btn-danger'> Eliminar del pedido</button>
-							</div>";
-				}
-				mysqli_close($con);*/
-		?> -->
-	</div>
-	
+		<div class="col-md-4">
+			<img class="rounded" src="img/pizza.jpg" alt="Pizza" style="width:50%">
+		</div>
+		<div class="col-md-4">
+			<h4>Nombre pizza/paquete</h4>
+			<h4>Precio</h4>
+			<h4>Caracteristicas</h4>
+		</div>
+		<div class="col-md-4">
+			<button class="btn btn-success" type="button"> Eliminar Pedido</button>
+		</div>
+	</div>	
+	<!-- elemento 2 -->
+	<div class="row justify-content-center">
+		<div class="col-md-4">
+			<img class="rounded" src="img/pizza.jpg" alt="Pizza" style="width:50%">
+		</div>
+		<div class="col-md-4">
+			<h4>Nombre pizza/paquete</h4>
+			<h4>Precio</h4>
+			<h4>Caracteristicas</h4>
+		</div>
+		<div class="col-md-4">
+			<button class="btn btn-success" type="button"> Eliminar Pedido</button>
+		</div>
+	</div>	
 </section>
 
 <?php

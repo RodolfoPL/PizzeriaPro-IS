@@ -2,7 +2,9 @@
 	<div class="modal-dialog" role="document" align="center">
 		<div class="modal-content" id="infoPizza" align="center">
 			<div class="modal-header">
-				<h4 class="modal-title" id="myModalLabel">Descripción de la paquete</h4>
+				<h4 class="modal-title" id="myModalLabel">
+					Descripcion Pizza
+				</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -15,16 +17,26 @@
 		 	 	</div>
 		 	 	<div class="col">
 			    	<form class="was-validated">
-			    		<div class="col-md-6">
-					      <label for="validationServer05">Cantidad</label>
-					      <!-- El valor maximo debe de cambiar aqui -->
+			    		<div class="form-group col-md-6">
+					      <label for="inputTam">Tamaño</label>
+					      <select id="inputTam" class="custom-select form-control" required>
+					        <option value="">Seleccione un tamaño...</option>
+					        <option value="1">Chica</option>
+					        <option value="2">Mediana</option>
+					        <option value="3">Grande</option>
+					         <option value="4">Familiar</option>
+					      </select>
+					       <div class="invalid-feedback">Seleccione un tamaño de pizza</div>
+					    </div>
+						<div class="col-md-6">
+					      <label for="validationServer05">Cantidad de pizzas</label>
 					      <input type="number" min="1" max="20" class="form-control" id="cant" placeholder="cantidad" placeholder="Cantidad" required>
 					      <div class="invalid-feedback">Debe ingresar una cantidad</div>
 					  	</div>
 					  	<br>
 					  	<p class="costo">Costo: $</p>
 					  	<br>
-					  	<button class="btn btn-success" type="submit">Añadir al carrito</button>
+					  	<button class="btn btn-success" type="submit">Comprar</button>
 					  	<button class="btn btn-info" type="button" onclick="window.location = 'carrito.php'">Ver Carrito</button>
 			    	</form>
 		 	 	</div>
