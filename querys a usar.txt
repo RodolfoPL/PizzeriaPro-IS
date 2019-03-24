@@ -1,0 +1,63 @@
+--arreglar mysqld
+
+    c:\mysql\bin>mysqld --install
+    c:\mysql\bin>mysqld --initialize
+
+--SQL Scripts
+
+--codigo para conectar la bd
+$con = conectar();
+	if(!$con){
+		echo "Error de base de datos";
+	}
+
+--PARA DESCRIPCION PIZZAS
+	--mostrar datos en el modal de acuerdo al nombre que le mande la pantalla anterior;
+	$nombre = POST["nombre"];
+	$consulta = "SELECT * FROM pizza WHERE nombre = $nombre";
+	$resultado = mysqli_query($con, $consulta) or die ( "Error de consulta");
+	if(mysqli_num_rows($resultado) > 0){
+		while ($producto = mysqli_fetch_array( $resultado )){
+			echo "
+			<div class='modal-header'>
+				<h4 class='modal-title' id='myModalLabel'>".$producto['nombre']."</h4>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+					<span aria-hidden='true'>&times;</span>
+				</button>
+			</div>
+			<div class='modal-body  container-fluid'>
+			<div class='col'>
+			    <div class='container' >
+			    	<img class='rounded' src='".$producto['url_imagen']."' alt='Pizza' style='width:50%'>
+			    </div>
+			    <div class='container' >
+			    	<p>".$producto['descripcion']"</p>
+			    </div>
+		 	</div>
+			<div class='col'>
+			 	<form class='was-validated'>
+			 		<div class='form-group col-md-6'>
+				     <label>Tamaño</label>
+				     	<select id='tam' name='tam' class='custom-select form-control' required>
+					       <option value=''>Seleccione un tamaño...</option>
+					       <option value='".$producto['precio_chica']."'>Chica</option>
+					       <option value='".$producto['precio_mediana']."'>Mediana</option>
+					       <option value='".$producto['Precio_grande']."'>Grande</option>
+							<option value='".$producto['precio_familiar']."'>Familiar</option>
+						</select>
+						<div class='invalid-feedback'>Seleccione un tamaño de pizza</div>
+					</div>
+					<div class='col-md-6'>
+					<label for='validationServer05'>Cantidad de pizzas</label>
+					<input type='number' name='cant' min='1' max='20' class='form-control' id='cant' placeholder='cantidad' placeholder='Cantidad' required>
+					<div class='invalid-feedback'>Debe ingresar una cantidad</div>
+					</div>
+					<br>
+					<p class='costo' id='costo'>Costo: $</p>
+					<br>
+					<button class='btn btn-success' type='submit'>Añadir al carrito</button>
+					<button class='btn btn-info' type='button' onclick='window.location = 'carrito.php''>Ver Carrito</button>
+				</form>
+			</div>"
+		}
+	}

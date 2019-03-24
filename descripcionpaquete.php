@@ -8,6 +8,7 @@
 				</button>
 			</div>
 			<div class="modal-body  container-fluid">
+				<!-- AQUI VA EL QUERY -->
 				<div class="col">
 				    <div class="container" >
 				    	<img class="rounded" src="img/pizza.jpg" alt="Pizza" style="width:50%">
@@ -28,6 +29,7 @@
 					  	<button class="btn btn-info" type="button" onclick="window.location = 'carrito.php'">Ver Carrito</button>
 			    	</form>
 		 	 	</div>
+		 	 	<!-- AQUI TERMINA EL QUERY -->
 			</div>
 		</div>
 	</div>
