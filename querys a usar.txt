@@ -61,3 +61,42 @@ $con = conectar();
 			</div>"
 		}
 	}
+
+
+--para el modal de los paquetes
+	$nombre = POST["nombre"];
+	$consulta = "SELECT * FROM paquete WHERE nombre = $nombre";
+	$resultado = mysqli_query($con, $consulta) or die ( "Error de consulta");
+	if(mysqli_num_rows($resultado) > 0){
+		while ($producto = mysqli_fetch_array( $resultado )){
+		echo "
+			<div class='modal-header'>
+				<h4 class='modal-title' id='myModalLabel'>".$producto['nombre']."</h4>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+					<span aria-hidden='true'>&times;</span>
+				</button>
+			</div>
+			<div class='modal-body  container-fluid'>
+				<div class='col'>
+				    <div class='container' >
+				    	<img class='rounded' src='".$producto['url_imagen']."' alt='Pizza' style='width:50%'>
+				    </div>
+		 	 	</div>
+		 	 	<div class='col'>
+			    	<form class='was-validated'>
+			    		<div class='col-md-6'>
+					      <label id='PPP' name='".$producto['noPizzas']."'>Cantidad</label>
+					      <input type='number' min='1' max='20' class='form-control' id='cant' name='cantpaq' placeholder='cantidad' placeholder='Cantidad' id='cant' required>
+					      <div class='invalid-feedback'>Debe ingresar una cantidad valida</div>
+					  	</div>
+					  	<br>
+					  	<p id='costoP' name='".$producto['precio']."'>Costo: $</p>
+					  	<br>
+					  	<button class='btn btn-success' type='submit'>Añadir al carrito</button>
+					  	<button class='btn btn-info' type='button' onclick='window.location = 'carrito.php''>Ver Carrito</button>
+			    	</form>
+		 	 	</div>
+			</div> "
+
+
+--agregar al carrito
