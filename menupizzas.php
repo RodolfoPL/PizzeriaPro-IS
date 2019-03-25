@@ -93,7 +93,7 @@
 								<div class="row justify-content-center">
 								<div id="tamanioPizza" class="form-group">
 									<label for="tamaño">Tamaño</label>
-									<select name="tam" class="form-control" id="tamanio">
+									<select name="tam" class="form-control" id="tamaniopizza">
 										<option selected disabled>Escoge un tamaño</option>
 										<option id="tamChica">Chica </option>
 										<option id="tamMed">Mediana</option>
@@ -108,7 +108,7 @@
 									<div id='cantidadPizza'>
 										<div class="form-group">
 											<label for="cantidad">Cantidad</label>
-											<input name="cant" type="number" id="cantidad" class="form-control" min="1" max="20">
+											<input name="cant" type="number" id="cantidadpizza" class="form-control" min="1" max="20">
 										</div>
 										 <div class="invalid-feedback">Debe ingresar una cantidad</div>
 									</div>

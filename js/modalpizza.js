@@ -46,19 +46,19 @@ $(".pizza").click(function(){
 //document.getElementById("costo").innerHTML = "Costo: $" + costo.toString();
 //console.log(tamanio.value + "\n" + cant.value);
   
-  $("#tamanio").change(function(){
+  $("#tamaniopizza").change(function(){
     //price=$(this).val();
-   // total();
+    total();
     //alert(price);
   });
-  $("#cantidad").change(function(){
+  $("#cantidadpizza").change(function(){
       total();
       //cantidad=$(this).val();
   });
 
   function total(){
-    var price=$("#tamanio").val();
-    var cantidad=$("#cantidad").val();
+    var price=$("#tamaniopizza").val();
+    var cantidad=$("#cantidadpizza").val();
     
     var total_price = price * cantidad;
 
