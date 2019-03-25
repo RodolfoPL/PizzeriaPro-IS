@@ -1,6 +1,6 @@
 	<?php
 	include("header.html");
-	include("descripcionpizza.php");
+	//include("descripcionpizza.php");
 	include("conexion.php");
 
 	//Crea el id de acuerdo al no de sesion

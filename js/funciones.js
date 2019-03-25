@@ -10,7 +10,7 @@ function carga_ajax(id,div,url){
 }
 
 //funciones dentro del modal
-
+/*
 document.addEventListener('DOMContentLoaded',function() {
     document.querySelector('select[name="tam"]').onchange=calculaSubTotal;
 },false);
@@ -26,4 +26,4 @@ function calculaSubTotal(){
 	console.log(costo);
 	document.getElementById("costo").innerHTML = "Costo: $" + costo.toString();
 	//console.log(tamanio.value + "\n" + cant.value);
-}
+}*/

@@ -80,7 +80,7 @@ h2{
 
 
 /*Editing the modal*/
-#descripcion{
+#exampleModal{
 	width: 100%;
 	margin:2% auto;
 
@@ -89,4 +89,9 @@ h2{
 #tamanioPizza,#cantidadPizza{
 	width: 60%;
 	margin:2% auto;
+}
+
+
+img{
+	width: 60%;
 }

@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   /*
   $(document).on('show.bs.modal','#exampleModal', function () {
@@ -46,24 +45,25 @@ $(".pizza").click(function(){
 
 //document.getElementById("costo").innerHTML = "Costo: $" + costo.toString();
 //console.log(tamanio.value + "\n" + cant.value);
-  var price=0;
-  var cantidad=0;
   
   $("#tamanio").change(function(){
-    price=$(this).val();
-    total();
+    //price=$(this).val();
+   // total();
     //alert(price);
   });
   $("#cantidad").change(function(){
       total();
-      cantidad=$(this).val();
+      //cantidad=$(this).val();
   });
 
   function total(){
-    console.log("alfo");
+    var price=$("#tamanio").val();
+    var cantidad=$("#cantidad").val();
+    
     var total_price = price * cantidad;
+
     total_price = "Costo $: "+ total_price;
-    console.log("$" + total_price);
+    
     $("#exampleModal #costo").text(total_price);
     
   }

@@ -16,7 +16,7 @@
 				}
 				$consulta = "SELECT * FROM paquete";
 				$resultado = mysqli_query($con, $consulta) or die ( "Error de consulta");
-				//mostrar todas las pizzas de la bd
+				//mostrar todas los paquetes
 				if(mysqli_num_rows($resultado) > 0){
 					$i = 0;
 					while ($producto = mysqli_fetch_array( $resultado )){
@@ -29,8 +29,8 @@
 						//<!-- paquete -->
 						echo" <div class='col-md-5'>
 							<div class='thumbnail'>
-							    <a href='' data-toggle='modal' data-target='#descripcion' onclick='carga_ajax('12','modal','descripcionpaquete.php');'>
-							        <img class='rounded img-fluid' src='".$producto['url_imagen']."' alt='Pizza'>
+							    <a href='' class='paquete' data-toggle='modal' data-target='#exampleModal' data-nombre='".$producto['nombre']."' data-descripcion='".$producto['Descripcion']."' data-paquete='".$producto['idPaquete']."' data-precio='".$producto['precio']."' data-paqueteUrl='".$producto['url_imagen']."' data-noPizzas='".$producto['noPizzas']."'>
+							        <img class='rounded img-fluid' src='".$producto['url_imagen']."' alt='paquete'>
 							        <div class='caption'>
 										<p class='menu'>".$producto['nombre']."</p>
 										<p class='menu'>Precio: $ ".$producto['precio']."</p>
@@ -50,25 +50,51 @@
 					
 
 			?>	
+				<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+					<div class='modal-dialog' role='document'>
+						<div class='modal-content'>
+							<div class='modal-header'>
+								<h5 class='modal-title' id='exampleModalLabel'></h5>
+								<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+									<span aria-hidden='true'>&times;</span>
+								</button>
+							</div>
+							<div class='modal-body' >
+								<form class="was-validated">
+									<div class="row justify-content-center">
+										<div id='imagepaquete'></div>
+									</div>
+									<div class="row justify-content-center">
+										<p id='descripcion'></p>
+									</div>
 
-			<!-- Fila de pizza
-			<div class="row justify-content-center">
-			Paquete
-			  <div class="col-md-5">
-			    <div class="thumbnail" >
-			    	<a href="#" data-toggle="modal" data-target="#descripcion">
-			        <img class="rounded img-fluid" src="img/pizza.jpg" alt="Paquete">
-			        <div class="caption">
-						<p class="menu">Nombre Paquete</p>
-						<p class="menu">Costo Paquete</p>
-			        </div>
-			      </a>
-			    </div>
-			  </div>
-			</div> -->
-				
-		</div>
-		<!-- Carrito -->
+									<div class="row justify-content-center">
+										<div id='cantidadPizza'>
+											<div class="form-group">
+												<label for="cantidad">Cantidad</label>
+												<input name="cant" type="number" id="cantidad" class="form-control" min="1" max="20">
+											</div>
+											 <div class="invalid-feedback">Debe ingresar una cantidad</div>
+										</div>
+									</div>
+
+									<div clas="row justify-content-center">
+											<div id="costoPizza">
+												<p id="costo"></p>
+											</div>
+									</div>
+
+
+									<div class='modal-footer'>
+										<button type='button' class='btn btn-primary'>Agregar al carrito</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>	
+				</div>
+			<!-- Carrito -->
+			</div>
 		<div class="col-md-4">
 			<?php
 				include("sidebar_carrito.php")
