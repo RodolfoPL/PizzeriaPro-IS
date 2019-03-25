@@ -11,6 +11,9 @@ $con = conectar();
 		echo "Error de base de datos";
 	}
 
+--cerrar la bd
+	mysqli_close($con);
+
 --PARA DESCRIPCION PIZZAS
 	--mostrar datos en el modal de acuerdo al nombre que le mande la pantalla anterior;
 	$nombre = POST["nombre"];
@@ -99,4 +102,5 @@ $con = conectar();
 			</div> "
 
 
---agregar al carrito
+
+

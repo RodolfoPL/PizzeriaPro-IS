@@ -18,10 +18,8 @@
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 80">
-		  		<iframe src="https://maps.google.com/maps?&output=embed" frameborder="0"
-		    style="border:0"></iframe>
-			</div>
+			<!--Google map-->
+			<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=+(Pizzeria%20Pro)&ie=UTF8&t=&z=12&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/journey-planner.htm"></a></iframe></div><br />
 		</div>
 	</div>
 </section>
