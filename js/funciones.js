@@ -1,5 +1,5 @@
 function carga_ajax(id,div,url){
- 	//console.log("OK");
+ 	console.log("OK");
     $.post(
 		url,
 		{id:id},
@@ -9,31 +9,14 @@ function carga_ajax(id,div,url){
 	);
 }
 
-//funciones dentro del modal de pizzas
+//funciones dentro del modal
+
 document.addEventListener('DOMContentLoaded',function() {
-	try{
-    	document.querySelector('select[name="tam"]').onchange=calculaSubTotal;
-    }catch(e){
-    	//console.log(e);
-    }
+    document.querySelector('select[name="tam"]').onchange=calculaSubTotal;
 },false);
 
 document.addEventListener('DOMContentLoaded',function() {
-	try{
     document.querySelector('input[name="cant"]').onchange=calculaSubTotal;
-	}catch(e){
-		//console.log(e);
-	}
-},false);
-
-
-//funciones del modal de paquetes
-document.addEventListener('DOMContentLoaded',function() {
-	try{
-    document.querySelector('input[name="cantpaq"]').onchange=calculaSubTotalP;
-	}catch(e){
-		//console.log(e);
-	}
 },false);
 
 function calculaSubTotal(){
@@ -43,15 +26,4 @@ function calculaSubTotal(){
 	console.log(costo);
 	document.getElementById("costo").innerHTML = "Costo: $" + costo.toString();
 	//console.log(tamanio.value + "\n" + cant.value);
-}
-
-function calculaSubTotalP(){
-	let pizzasporpaquete = document.getElementById("PPP");
-	let cant = document.querySelector('input[name="cantpaq"]');
-	let precio = document.getElementById("costoP");
-	let costo = parseInt(cant.value)*parseInt(precio.getAttribute("name"));
-	console.log(cant);
-
-	document.getElementById("cantidad").max = parseInt(20/parseInt(pizzasporpaquete.getAttribute("name")));
-	document.getElementById("costoP").innerHTML = "Costo: $" + costo.toString();
 }

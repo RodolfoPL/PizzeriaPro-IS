@@ -5,7 +5,7 @@
 	<form action="menupizzas.php">
 		<div class="form-row justify-content-center">
 			<div class="form-group col-md-4">
-		      <select class="custom-select form-control" required>
+		      <select class="form-control" required>
 		        <option value="">Forma de entrega</option>
 		        <option value="1">Sucursal</option>
 		        <option value="2">A domicilio</option>

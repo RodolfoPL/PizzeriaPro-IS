@@ -1,3 +1,14 @@
+
+
+a.nav-link{
+   color: white !important;
+}
+a.nav-link:hover{
+   color: #FAC06F !important;
+}
+
+
+
 a.foot, p.foot{
 	color: #DAD7D7;
 	padding-bottom: 0px;
@@ -65,4 +76,17 @@ h2{
 		margin-bottom: 20px;
 		margin-right: 0;
 	}
+}
+
+
+/*Editing the modal*/
+#descripcion{
+	width: 100%;
+	margin:2% auto;
+
+}
+
+#tamanioPizza,#cantidadPizza{
+	width: 60%;
+	margin:2% auto;
 }
