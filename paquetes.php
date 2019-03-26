@@ -45,13 +45,13 @@
 		}
 	}
 
-	preR($_SESSION);
+/*	preR($_SESSION);
 
 	function preR($array){
 		echo '<pre>';
 		print_r($array);
 		echo '</pre>';
-	}
+	}*/
 ?>
 
 <section class="main container">
