@@ -13,9 +13,12 @@ a.foot, p.foot{
 	color: #DAD7D7;
 	padding-bottom: 0px;
 }
+
+
 footer{
-	position: button;
+  	background-color:rgba(0,0,0);
 }
+
 p.menu{
 	color: black;
 	margin-bottom: 2px;
@@ -70,13 +73,6 @@ h2{
 	position:absolute;
 }
 
-@media screen and (max-width: 768){
-	.post .thumb {
-		width: 100%;
-		margin-bottom: 20px;
-		margin-right: 0;
-	}
-}
 
 
 /*Editing the modal*/
@@ -92,6 +88,32 @@ h2{
 }
 
 
-img{
-	width: 60%;
+img[id = "logo"]{
+	width: 50%;
+	height: 80%;
+}
+
+img[name='menu']{
+	width: 8cm;
+}
+
+img[name='menu']{
+	width: 8cm;
+}
+
+div.imagepaquete{
+	width: 80%;
+}
+
+section.main container{
+	width: 100%;
+}
+
+
+@media screen and (max-width: 768){
+	.post .thumb {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
 }

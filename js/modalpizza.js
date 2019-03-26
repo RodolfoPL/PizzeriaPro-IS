@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   /*
   $(document).on('show.bs.modal','#exampleModal', function () {
@@ -9,14 +10,14 @@ $(document).ready(function(){
 });*/
 
 $(".pizza").click(function(){
-  var nombre=$(this).attr('data-nombre');
-  var descripcion=$(this).attr('data-descripcion');
-  var precioChica=$(this).attr('data-precioChica');
-  var precioMediana=$(this).attr('data-precioMediana');
-  var precioGrande=$(this).attr('data-precioGrande');
-  var precioFamiliar=$(this).attr('data-precioFamiliar');
-  var pizzaId=$(this).attr('data-pizza');
-  var pizzaUrl=$(this).attr('data-pizzaUrl');
+   var nombre=$(this).attr('data-nombre');
+   var descripcion=$(this).attr('data-descripcion');
+   var precioChica=$(this).attr('data-precioChica');
+   var precioMediana=$(this).attr('data-precioMediana');
+  var  precioGrande=$(this).attr('data-precioGrande');
+   var precioFamiliar=$(this).attr('data-precioFamiliar');
+   var pizzaId=$(this).attr('data-pizza');
+   var pizzaUrl=$(this).attr('data-pizzaUrl');
 
 
   /*alert(precioChica);
@@ -26,7 +27,7 @@ $(".pizza").click(function(){
 
 
 
-
+  var imagefluid = "class='rounded img-fluid'";
 
   $("#imagePizza").html("<img src=" +pizzaUrl+ ">");
   $("#exampleModalLabel").text(nombre);
@@ -39,7 +40,13 @@ $(".pizza").click(function(){
   $("#tamGrande").val(precioGrande);
   $("#tamFam").val(precioFamiliar);
 
+  /*Adding values to tam of the pizza in the modal*/
+  //$("#idPizza").val(pizzaId);
+  $("#name").val(nombre);
+  $("#image").val(pizzaUrl);
+  $("#desc").val(descripcion);
 
+  $("#submitPizza").attr('action','menupizzas.php?action=add&id='+pizzaId);
 });
 
 
@@ -49,7 +56,6 @@ $(".pizza").click(function(){
   $("#tamaniopizza").change(function(){
     //price=$(this).val();
     total();
-    //alert(price);
   });
   $("#cantidadpizza").change(function(){
       total();
@@ -67,7 +73,14 @@ $(".pizza").click(function(){
     $("#exampleModal #costo").text(total_price);
     
   }
+
+  $("#addToCart").click(function(e) {
+    var size=$("#tamaniopizza option:selected").text(); 
+    $("#size").val(size);
+  });
+
 });
+
 
 
 

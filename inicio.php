@@ -2,7 +2,7 @@
 	include("header.html");
 ?>
 <section class="main container">
-	<form action="menupizzas.php">
+	<form action="menupizzas.php" class="was-validated">
 		<div class="form-row justify-content-center">
 			<div class="form-group col-md-4">
 		      <select class="form-control" required>
@@ -22,8 +22,9 @@
 			    <label>Seleccione su ubicación/tienda</label>
 	   		 </div>
 	   		 <div class="form-group col-md-4">
-		      	<input type="text" class="form-control" id="inputAddress" placeholder="Escom">
+		      	<input type="text" class="form-control" id="inputAddress" placeholder="Escom" required>
 	   		 </div>
+		      <div class="invalid-feedback">Seleccione una direccion de entrega</div>
 		</div>
 	</form>
 	<!--Google map-->

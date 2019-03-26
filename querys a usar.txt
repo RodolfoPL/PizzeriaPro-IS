@@ -61,3 +61,20 @@ $con = conectar();
 			</div>"
 		}
 	}
+
+
+	SELECT * from pizza 
+	WHERE idPizza IN(SELECT idPizza FROM pedido)
+
+
+	SELECT * from pizza 
+	WHERE idPizza IN(SELECT idPizza FROM pedido WHERE idOrden=6)
+
+
+	--usar estos
+
+	SELECT pizza.*, pedido.cantidad, pedido.tam_pizza from pizza, pedido
+	WHERE pedido.idOrden=7 and pedido.idPizza = pizza.idPizza;
+
+	SELECT paquete.*, pedido.cantidad from paquete, pedido
+	WHERE pedido.idOrden=7 and pedido.idPaquete = paquete.idPaquete;

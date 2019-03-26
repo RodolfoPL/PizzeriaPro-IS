@@ -17,7 +17,7 @@ $(".paquete").click(function(){
 
 
   var m = 20/noPizzas;
-  console.log(m);
+  //console.log(m);
   document.getElementById("cantidad").setAttribute("max", m);
 
   $("#imagepaquete").html("<img src=" +paqueteUrl+ ">");
@@ -25,7 +25,15 @@ $(".paquete").click(function(){
   $("#exampleModal #descripcion").text(descripcion);
 
 
+  /*Adding values to tam of the pizza in the modal*/
+  //$("#idPizza").val(pizzaId);
+  $("#name").val(nombre);
+  $("#image").val(pizzaUrl);
+  $("#descripcion").val(descripcion);
+  $("#precio").val(precio);
+  $("#nopizzas").val(noPizzas);
 
+  $("#submitPaquete").attr('action','paquete.php?action=add&id='+paqueteId);
 });
 
 
